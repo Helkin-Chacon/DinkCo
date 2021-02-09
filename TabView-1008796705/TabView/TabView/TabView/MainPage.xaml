@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TabView"
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             x:Class="TabView.MainPage">
+             <ContentPage.Content>
+        <Grid>
+        <tabView:SfTabView BackgroundColor="#f6f6f6"
+                           VisibleHeaderCount="5" 
+                           EnableSwiping="false"
+                           TabHeaderPosition="Bottom"
+                           OverflowMode="CenterButton"
+                           >
+            <tabView:SfTabView.CenterButtonSettings>
+                     <tabView:CenterButtonSettings Height="60" Width="60"/>
+                 </tabView:SfTabView.CenterButtonSettings>
+            
+                 <tabView:SfTabView.SelectionIndicatorSettings>
+                     <tabView:SelectionIndicatorSettings Color="#1E90FF" 
+                                                         StrokeThickness="3"
+                                                         Position="Bottom"/>
+                 </tabView:SfTabView.SelectionIndicatorSettings>
+        
+          <tabView:SfTabView.CenterButtonView>
+                    <Image Source="Compose.png"
+                    Aspect="AspectFill"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Tapped="CenterButton_Tapped" />
+              </Image.GestureRecognizers>
+            </Image>
+         </tabView:SfTabView.CenterButtonView>
+        <tabView:SfTabItem Title="Call">
+            <tabView:SfTabItem.Content>
+                    <Grid BackgroundColor="White" x:Name="AllContactsGrid" >
+                        <ListView x:Name="ContactListView" 
+                                  ItemsSource="{Binding ContactList}"
+                                  RowHeight="75">
+                            <ListView.BindingContext>
+                                <local:ContactsViewModel />
+                            </ListView.BindingContext>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Vertical" Margin="30,0,0,0">
+                                            <Label 
+                                                Text="{Binding Name}"
+                                                FontSize="24" 
+                                                 />
+                                            <Label 
+                                                Text="{Binding Number}" 
+                                                FontSize="20" 
+                                                TextColor="LightSlateGray" />
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+        <tabView:SfTabItem Title="Favorites">
+            <tabView:SfTabItem.Content>
+                <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+        <tabView:SfTabItem Title="Contacts">
+            <tabView:SfTabItem.Content>
+                <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Missed Call">
+            <tabView:SfTabItem.Content>
+                <Grid BackgroundColor="Yellow" x:Name="MissedCallGrid" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>
+            </Grid>
+    </ContentPage.Content>
+    
+
+</ContentPage>
