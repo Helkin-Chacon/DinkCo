@@ -4,6 +4,7 @@ FFImageLoading.Svg.Forms
 FFImageLoading.Svg.Platform
 FFImageLoading.Transformations
 FormsViewGroup
+Microsoft.Identity.Client
 SkiaSharp
 Syncfusion.Buttons.XForms.Android
 Syncfusion.Core.XForms.Android

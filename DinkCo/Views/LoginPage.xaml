@@ -7,7 +7,8 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" 
-             xmlns:controls="clr-namespace:DinkCo.Controls">
+             xmlns:controls="clr-namespace:DinkCo.Controls"
+             xmlns:ViewModels="clr-namespace:LogFinalDink.viewModel">
     <ContentPage.Resources>
         <ResourceDictionary>
             <ffimageloadingsvg:SvgImageSourceConverter x:Key="SvgImageSourceConverter">
@@ -15,6 +16,12 @@
             </ffimageloadingsvg:SvgImageSourceConverter>
         </ResourceDictionary>
     </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <ViewModels:LoginPageViewModel>
+            
+        </ViewModels:LoginPageViewModel>
+    </ContentPage.BindingContext>
 
     <ContentPage.Content        >
         <Grid>
@@ -41,7 +48,7 @@
                 </ffimageloading:CachedImage>
             </StackLayout>
             <FlexLayout Grid.Column="0" Grid.Row="1" JustifyContent="SpaceAround" Direction="Column"  >
-
+                <!--
                <Label 
                    Margin ="30,0,30,0"
                    Text="Email"
@@ -50,12 +57,6 @@
                    TextColor="Black"
                    FontFamily="Quicksand_Bold">
                     </Label>
-                <!--<Label
-                    FontFamily="fontdink"
-                    Text="&#xE80D;"
-                    
-                    FontSize="32"
-                    TextColor="Tomato"></Label>-->
                 <controls:StandardEntry   
                    FontFamily="Quicksand_Light"
                    FontSize="14"
@@ -73,9 +74,8 @@
                    CornerRadius="8"
                    PlaceholderColor="#B3B3B3">
 
+                
                 </controls:StandardEntry>
-
-
                 <Label Margin ="30,10,30,0"
                    Text="Password"
                    HorizontalOptions="Start"
@@ -98,11 +98,15 @@
                    BackgroundColor="White"
                    BorderColor="#D3D0D0"
                    BorderThickness="1"
-                   CornerRadius="8"                   >
+                   CornerRadius="8">
 
                 </controls:StandardEntry>
+                -->
+            
+
+                
                 <Button
-                Text="SUBMIT"
+                Text="START"
                 FontFamily="Quicksand_Bold"
                     FontSize="14"
                 BackgroundColor="#964399"
@@ -112,7 +116,7 @@
                 WidthRequest="160"
                 FlexLayout.AlignSelf="Center"
                 CornerRadius="8"
-                Clicked="GoToPrincipal">
+                Command="{Binding CommandSignIn}">
 
                 </Button>
 

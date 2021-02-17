@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogFinalDink.viewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace DinkCo.Views
 	{
         public LoginPage()
         {
+            
             InitializeComponent();
 
         }
@@ -25,12 +27,18 @@ namespace DinkCo.Views
 
         private void GoToRegister(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegisterPage());
+           // Navigation.PushAsync(new RegisterPage());
         }
 
         private void GoToPrincipal(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MenusPage());
+            //Navigation.PushAsync(new MenusPage());
+        }
+
+        protected override async void OnAppearing()
+        {
+            BindingContext = new LoginPageViewModel();
+            base.OnAppearing();
         }
     }
 }

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj": {}
+    "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj": {
+    "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj",
         "projectName": "DinkCo.iOS",
-        "projectPath": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj",
-        "packagesPath": "C:\\Users\\HELKIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo.iOS\\obj\\",
+        "projectPath": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo.iOS\\DinkCo.iOS.csproj",
+        "packagesPath": "C:\\Users\\SEBASTIAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\HELKIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SEBASTIAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj": {
-                "projectPath": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj"
+              "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj": {
+                "projectPath": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj"
               }
             }
           }
@@ -42,6 +42,18 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.26.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
               "version": "[18.4.0.42, )"
@@ -53,6 +65,10 @@
             "Syncfusion.Xamarin.SfTabView": {
               "target": "Package",
               "version": "[18.4.0.42, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -89,20 +105,20 @@
         }
       }
     },
-    "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj": {
+    "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj",
+        "projectUniqueName": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj",
         "projectName": "DinkCo",
-        "projectPath": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj",
-        "packagesPath": "C:\\Users\\HELKIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HELKIN\\source\\repos\\DinkCo\\DinkCo\\obj\\",
+        "projectPath": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo\\DinkCo.csproj",
+        "packagesPath": "C:\\Users\\SEBASTIAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SEBASTIAN\\source\\repos\\DinkCo\\DinkCo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\HELKIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SEBASTIAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -129,11 +145,23 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.26.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
@@ -146,6 +174,10 @@
             "Syncfusion.Xamarin.SfTabView": {
               "target": "Package",
               "version": "[18.4.0.42, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -178,7 +210,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

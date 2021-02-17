@@ -1,4 +1,6 @@
-﻿using Syncfusion.SfNavigationDrawer.XForms;
+﻿using DinkCo.ViewModels;
+using Microsoft.Identity.Client;
+using Syncfusion.SfNavigationDrawer.XForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,12 @@ namespace DinkCo.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenusPage : ContentPage
 	{
-		public MenusPage()
+        private AuthenticationResult authenticationResult;
+        public MenusPage(AuthenticationResult authResult )
         {
+            //Datos del Token
+            authenticationResult = authResult;
+
             InitializeComponent();
             SfNavigationDrawer hola = navigationDrawer1;
          
@@ -92,5 +98,14 @@ namespace DinkCo.Views
         {
 
         }
+
+        //Funcion 
+        protected override void OnAppearing()
+        {
+            BindingContext = new MenusPageViewModel(authenticationResult);
+            base.OnAppearing();
+
+        }
+
     }
 }
